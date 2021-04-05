@@ -6,7 +6,6 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-
 module.exports = (env, argv) => {
   console.log(argv.mode);
   return {
@@ -33,6 +32,7 @@ module.exports = (env, argv) => {
       },
       ]
     },
-    watch: argv.node === 'development',  
+    watch: argv.node === 'development',
+    resolve: { extensions: ['.js', '.jsx'], },
   };
 };

@@ -1,10 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LOGO from '../static/Logo.jpg';
+import Board from './components/Board';
+import AppToolbar from './components/AppToolbar';
 
-const Index = () => {
-  return <div className='container'><h1>YassineAMG</h1>
-  	<img src={LOGO} alt="Logo" />
-  </div>;
-};
-ReactDOM.render(<Index />, document.getElementById('root'));
+function App() {
+  const [Voitures, setVoitures] = React.useState([
+  		{title: 'Mercedes'},
+  		{title: 'BMW'},
+  		{title: 'Audi'}
+  	]);
+
+  setVoitures = voitures => this.setState({voitures});
+
+  return (
+    <div className="app">
+      <AppToolbar />
+      <Board />
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
