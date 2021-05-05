@@ -1,5 +1,7 @@
 import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import InputBase from '@material-ui/core/InputBase';
 import { makeStyles, AppBar, Icon, Toolbar, Typography, Button, IconButton, createMuiTheme, ThemeProvider } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +40,14 @@ function AppToolbar(){
 						<Typography variant="h6" className={classes.title}>
 						      TIW8 - YassineAMG
 						</Typography>
+			          <div className="search">
+			            <div className="searchIcon">
+			              <SearchIcon />
+			            </div>
+			            <InputBase
+			              placeholder="Search…"
+			            />
+			          </div>
 						<Icon>add_circle</Icon>
 					</Toolbar>
 				</AppBar>
