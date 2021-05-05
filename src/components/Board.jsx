@@ -1,26 +1,16 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
 
-function Voiture({voiture}){
-	return(
-		<div className="voiture">
-			{voiture.title}
-		</div>
-	);
-};
-
-function Board(){
-
-	return(
-		<div className="voitures">
-			{Voitures.map((voiture, index) => (
-				<Voiture 
-					key={index}
-					index={index}
-					voiture={voiture}
-				/>
-			))}
-		</div>
-	);
+function Board(amg) {
+  return (
+  	
+	    amg.postits.postits.map((postits) => (
+	      <Grid className="card">
+	        <h3>{postits.title}</h3>
+	        <p>{postits.text}</p>
+	      </Grid>
+	    ))
+  );
 }
 
 export default Board;

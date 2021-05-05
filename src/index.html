@@ -7,18 +7,33 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>TIW 8 - TP2</title>
-  <style type="text/css">
-  	.container{
-  		display: flex;
-      align-items: center;
-  		flex-direction: column;
-  	}
-    
-  </style>
+    <style type="text/css">
+       .tables{
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .container-card{
+        display: flex;
+      }
+
+      .card{
+        display: flex;
+        width: 250px;
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+      background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+      }
+
+      .card > p{
+        text-align: center;
+      }
+    </style>
 </head>
 <body>
   <div id="root"></div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
